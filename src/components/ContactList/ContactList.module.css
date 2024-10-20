@@ -4,15 +4,17 @@
     margin: 0;
   }
   
-  .item {
+  .list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
   }
   
-  .button {
+  .list button {
     padding: 5px 10px;
     background-color: #f44336;
     color: white;
@@ -20,7 +22,7 @@
     cursor: pointer;
   }
   
-  .button:hover {
+  .list button:hover {
     background-color: #d32f2f;
   }
   
