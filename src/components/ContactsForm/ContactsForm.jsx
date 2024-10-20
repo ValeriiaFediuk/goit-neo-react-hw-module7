@@ -1,7 +1,8 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact } from '../../redux/contactsOps'; 
+import { selectContacts } from '../../redux/contactsSlice';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch, useSelector } from 'react-redux';
-import { addContact, selectContacts } from '../../redux/contactsSlice';
 import styles from './ContactsForm.module.css';
 
 const ContactsForm = () => {
@@ -29,7 +30,7 @@ const ContactsForm = () => {
       name: values.name.trim(),
       number: values.number.trim(),
     };
-    dispatch(addContact(newContact));
+    dispatch(addContact(newContact)); 
     resetForm();
   };
 
@@ -41,9 +42,7 @@ const ContactsForm = () => {
     >
       <Form className={styles.form}>
         <div className={styles.fieldContainer}>
-          <label htmlFor="name" className={styles.label}>
-            Name
-          </label>
+          <label htmlFor="name" className={styles.label}>Name</label>
           <Field
             type="text"
             id="name"
@@ -55,9 +54,7 @@ const ContactsForm = () => {
         </div>
 
         <div className={styles.fieldContainer}>
-          <label htmlFor="number" className={styles.label}>
-            Number
-          </label>
+          <label htmlFor="number" className={styles.label}>Number</label>
           <Field
             type="text"
             id="number"
@@ -68,9 +65,7 @@ const ContactsForm = () => {
           <ErrorMessage name="number" component="div" className={styles.error} />
         </div>
 
-        <button type="submit" className={styles.button}>
-          Add Contact
-        </button>
+        <button type="submit" className={styles.button}>Add Contact</button>
       </Form>
     </Formik>
   );

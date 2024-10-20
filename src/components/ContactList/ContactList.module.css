@@ -1,29 +1,26 @@
 .list {
     list-style-type: none;
     padding: 0;
-    margin: 20px auto;
-    max-width: 400px;
+    margin: 0;
   }
   
   .item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
   }
   
-  button {
+  .button {
+    padding: 5px 10px;
     background-color: #f44336;
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
   }
   
-  button:hover {
+  .button:hover {
     background-color: #d32f2f;
   }
   

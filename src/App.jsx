@@ -10,14 +10,14 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts()); 
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Contact Book</h1>
       <ContactsForm />
-      <h2 className={styles.subTitle}>Contacts</h2>
+      <h2 className={styles.subtitle}>Contacts</h2>
       <SearchBox />
       <ContactList />
     </div>
